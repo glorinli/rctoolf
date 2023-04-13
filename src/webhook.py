@@ -10,7 +10,6 @@ class Webhook:
         self._author_name = author_name
         self._author_icon = author_icon
         self._author_link = author_link
-        pass
 
     def send_card(self, title, message, fields):
         test_data = {
@@ -40,4 +39,3 @@ class Webhook:
         res = res_data.read()
         print("Result:")
         print(res)
-        pass
