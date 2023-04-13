@@ -24,13 +24,7 @@ class Webhook:
                     "author_name": self._author_name,
                     "author_icon": self._author_icon,
                     "author_link": self._author_link,
-                    "fields": [
-                        {
-                            "title": "New Code Reliability Rating",
-                            "value": "Test",
-                            "short": True
-                        }
-                    ]
+                    "fields": fields
                 }
             ]
         }
