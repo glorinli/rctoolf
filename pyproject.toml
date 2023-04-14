@@ -16,7 +16,6 @@ classifiers = [
 ]
 keywords = ["rc", "webhook"]
 dependencies = [
-    "urllib",
     "json"
 ]
 requires-python = ">=3.0"
