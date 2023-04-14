@@ -11,8 +11,21 @@ class Webhook:
         self._author_icon = author_icon
         self._author_link = author_link
 
+    def _send(self, payload):
+        json_data = json.dumps(payload)
+        # print('Json data')
+        print(json_data)
+
+        req = request.Request(self._url, data=json_data.encode())
+        req.add_header('Content-Type', 'application/json')
+
+        res_data = request.urlopen(req)
+        res = res_data.read()
+        print("Result:")
+        print(res)
+
     def send_card(self, title, message, fields):
-        test_data = {
+        payload = {
             "attachments": [
                 {
                     "type": "Card",
@@ -28,14 +41,7 @@ class Webhook:
             ]
         }
 
-        json_data = json.dumps(test_data)
-        # print('Json data')
-        print(json_data)
+        self._send(payload)
 
-        req = request.Request(self._url, data=json_data.encode())
-        req.add_header('Content-Type', 'application/json')
-
-        res_data = request.urlopen(req)
-        res = res_data.read()
-        print("Result:")
-        print(res)
+    def send(self, message):
+        self._send({"text": message})

@@ -1,2 +1,3 @@
 urllib
 json
+python-dotenv

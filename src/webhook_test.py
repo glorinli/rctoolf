@@ -3,12 +3,14 @@
 
 import unittest
 from webhook import Webhook
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class WebhookTest(unittest.TestCase):
-    hook = Webhook("https://hooks.ringcentral.com/webhook/v2/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
-                   ".eyJvdCI6InUiLCJvaSI6IjEzOTAxNjQxODkxODciLCJpZCI6IjEyMDE4MDczODcifQ"
-                   ".goXReAz6Udxmi72q3_rFotX2nyx2mYSrdFxcpHnqcLM", "Test", "Test", "Test")
+    hook = Webhook(os.getenv("TEST_WEBHOOK"), "Test", "Test", "Test")
 
     def test_send_card(self):
         fields = [
@@ -20,7 +22,9 @@ class WebhookTest(unittest.TestCase):
         ]
 
         self.hook.send_card("Test title", "Test message", fields)
-        pass
+
+    def test_send(self):
+        self.hook.send("Test message")
 
 
 if __name__ == '__main__':
