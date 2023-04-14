@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: rctoolf
-Version: 0.0.1
+Version: 0.0.2
 Summary: Tools for RC
 Author-email: Glorin Li <ligr1991@gmail.com>
 License: MIT License
@@ -32,3 +32,5 @@ Classifier: Programming Language :: Python :: 3
 Requires-Python: >=3.0
 Description-Content-Type: text/markdown
 License-File: LICENSE
+
+# RC tool

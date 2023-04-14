@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rctoolf"
-version = "0.0.1"
+version = "0.0.2"
 description = "Tools for RC"
 readme = "README.md"
 authors = [{ name = "Glorin Li", email = "ligr1991@gmail.com" }]
