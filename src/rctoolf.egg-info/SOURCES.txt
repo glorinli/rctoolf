@@ -7,5 +7,4 @@ src/rctoolf/webhook.py
 src/rctoolf.egg-info/PKG-INFO
 src/rctoolf.egg-info/SOURCES.txt
 src/rctoolf.egg-info/dependency_links.txt
-src/rctoolf.egg-info/requires.txt
 src/rctoolf.egg-info/top_level.txt

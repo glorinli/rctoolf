@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rctoolf"
-version = "0.0.2"
+version = "0.0.3"
 description = "Tools for RC"
 readme = "README.md"
 authors = [{ name = "Glorin Li", email = "ligr1991@gmail.com" }]
@@ -15,9 +15,7 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 keywords = ["rc", "webhook"]
-dependencies = [
-    "json"
-]
+dependencies = []
 requires-python = ">=3.0"
 
 [project.urls]
