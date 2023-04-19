@@ -5,12 +5,8 @@ import json
 
 
 class Webhook:
-    def __init__(self, url, author_name, author_icon, author_link):
+    def __init__(self, url):
         self._url = url
-        self._author_name = author_name
-        self._author_icon = author_icon
-        self._author_link = author_link
-
     def _send(self, payload):
         json_data = json.dumps(payload)
         # print('Json data')
@@ -24,7 +20,7 @@ class Webhook:
         print("Result:")
         print(res)
 
-    def send_card(self, title, message, fields):
+    def send_card(self, title, message, fields, author_name, author_icon, author_link):
         payload = {
             "attachments": [
                 {
@@ -33,9 +29,9 @@ class Webhook:
                     "color": "#00ff2a",
                     "title": title,
                     "text": message,
-                    "author_name": self._author_name,
-                    "author_icon": self._author_icon,
-                    "author_link": self._author_link,
+                    "author_name": author_name,
+                    "author_icon": author_icon,
+                    "author_link": author_link,
                     "fields": fields
                 }
             ]
